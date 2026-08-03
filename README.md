@@ -1,61 +1,80 @@
 # Threat Intelligence Hub
 
-A serverless Threat Intelligence Hub that acts as both a **data scraper** and a **static API**.
+A serverless threat-intelligence project that collects public security feeds, converts them into versioned JSON snapshots, and presents the data through a lightweight Next.js interface.
 
-## How It Works
+## Architecture
 
-Python scripts in `src/` fetch and process threat intelligence data from external sources, then write the results as static JSON files into `api/v1/`. The Next.js frontend in `web/` reads directly from these JSON files — no backend server required at runtime.
-
+```text
+External threat-intelligence sources
+                │
+                ▼
+      Python collection scripts
+                │
+                ▼
+       Normalized JSON snapshots
+          (`api/v1/*.json`)
+                │
+                ▼
+         Next.js web interface
 ```
-[External Sources] → src/ (scrapers) → api/v1/*.json → web/ (Next.js frontend)
-```
 
-## Project Structure
+The project separates data collection from presentation. Python scripts fetch and normalize external data, while the frontend reads static JSON files. No application server is required at runtime, which keeps deployment simple and makes each dataset snapshot reproducible through Git history.
 
-```
+## Repository Structure
+
+```text
 ThreatMonitoring/
-├── src/               # Python scraper scripts
+├── src/               # Python collectors and processing scripts
 ├── api/
-│   └── v1/            # Static JSON data (output of scrapers)
-├── web/               # Next.js frontend
+│   └── v1/            # Generated, versioned JSON feeds
+├── web/               # Next.js and TypeScript frontend
 ├── requirements.txt   # Python dependencies
-└── .env               # Environment variables (not committed)
+└── .env.example       # Required environment variables
 ```
 
-## Setup
+## Local Setup
 
-### Python (scrapers)
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MysticX662/ThreatMonitoring.git
+cd ThreatMonitoring
+```
+
+### 2. Configure and run the Python collectors
 
 ```bash
 python -m venv venv
-source venv/bin/activate       # Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+cp .env.example .env
+python src/<collector_name>.py
 ```
 
-### Next.js (frontend)
+Each collector writes its processed output to `api/v1/<feed_name>.json`.
+
+### 3. Run the web interface
 
 ```bash
 cd web
-npx create-next-app@latest .
+npm install
 npm run dev
 ```
 
-### Environment Variables
+Open the local URL printed by Next.js.
 
-Copy `.env.example` to `.env` and fill in your API keys:
+## Deployment Model
 
-```bash
-cp .env.example .env
-```
+The generated `api/v1/` directory can be served from GitHub Pages, Vercel, or another static host. Because the feed outputs are stored as JSON files, each update creates a reviewable and reproducible snapshot rather than depending on a continuously running backend.
 
-## Running the Scrapers
+## What This Project Demonstrates
 
-```bash
-python src/<scraper_name>.py
-```
+- Python-based data ingestion and normalization
+- Static API design
+- Reproducible, version-controlled datasets
+- Next.js and TypeScript frontend development
+- Separation of data pipelines from user-facing product layers
 
-Each scraper writes its output to `api/v1/<feed_name>.json`. Commit the JSON files to serve them as a static API via GitHub Pages, Vercel, or any static host.
+## Status
 
-## Deploying the Static API
-
-The `api/v1/` directory can be served from any static file host. JSON files are versioned in git, so every scraper run produces a reproducible snapshot of threat data.
+This is a technical project and reference implementation. Data quality, update frequency, and source availability depend on the external feeds configured by the operator.
