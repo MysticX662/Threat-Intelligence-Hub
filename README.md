@@ -1,80 +1,97 @@
 # Threat Intelligence Hub
 
-A serverless threat-intelligence project that collects public security feeds, converts them into versioned JSON snapshots, and presents the data through a lightweight Next.js interface.
+> **Serverless threat-intelligence hub with Python collectors, versioned JSON feeds, and a Next.js interface.**
 
-## Architecture
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Framework](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB)](https://python.org)
 
-```text
-External threat-intelligence sources
-                │
-                ▼
-      Python collection scripts
-                │
-                ▼
-       Normalized JSON snapshots
-          (`api/v1/*.json`)
-                │
-                ▼
-         Next.js web interface
+---
+
+## Overview & Problem Statement
+
+Cybersecurity researchers and SOC analysts frequently require lightweight access to aggregated open-source threat intelligence (OSINT) feeds—such as malicious IP lists, active phishing domains, and vulnerability indicators (CVEs). Operating complex SIEM servers or heavy database pipelines is often overkill for small security teams or independent research.
+
+**Threat Intelligence Hub** provides a decoupled, serverless architecture that uses automated Python scripts to pull public OSINT feeds, normalize raw indicator formats into structured JSON schema, and serve them via a static API interface built with Next.js and React.
+
+---
+
+## My Role
+
+I am the **Creator and Developer** of Threat Intelligence Hub. I designed the automated collection pipeline, data normalization schemas, JSON feed versioning structure, and Next.js frontend UI.
+
+---
+
+## Architecture & Data Flow
+
+```
+[ Public OSINT Sources ] (Malicious IP Feeds, Phishing Feeds, CVE Feeds)
+           │
+           ▼
+[ Python Collector Pipeline ]
+   ├── Feed Fetcher & Rate Limiter
+   ├── Indicator Normalizer (IP / Domain / Hash / CVE Schema)
+   └── Deduplication & JSON Versioner
+           │
+           ▼
+[ Versioned JSON Feed Files ] (`/public/api/v1/feeds/`)
+           │
+           ▼
+[ Next.js Interface & Static API ] ──► [ Security Analyst Dashboard ]
 ```
 
-The project separates data collection from presentation. Python scripts fetch and normalize external data, while the frontend reads static JSON files. No application server is required at runtime, which keeps deployment simple and makes each dataset snapshot reproducible through Git history.
+---
 
-## Repository Structure
+## Key Features
 
-```text
-ThreatMonitoring/
-├── src/               # Python collectors and processing scripts
-├── api/
-│   └── v1/            # Generated, versioned JSON feeds
-├── web/               # Next.js and TypeScript frontend
-├── requirements.txt   # Python dependencies
-└── .env.example       # Required environment variables
-```
+- **Automated Collection**: Modular Python collectors ingest publicly available threat indicator feeds.
+- **Normalized Schema**: Unifies disparate raw formats into standardized JSON payload structure:
+  ```json
+  {
+    "indicator": "192.0.2.1",
+    "type": "ipv4",
+    "threat_category": "malware_c2",
+    "first_seen": "2026-08-01T12:00:00Z",
+    "source": "public_osint_feed"
+  }
+  ```
+- **Serverless & Cost-Effective**: Generates versioned static JSON endpoints deployed easily to Vercel or GitHub Pages without server management.
+- **Fast Dashboard UI**: Next.js client interface with real-time client-side searching, filtering by indicator type, and JSON export.
 
-## Local Setup
+---
 
-### 1. Clone the repository
+## Getting Started & Local Development
 
-```bash
-git clone https://github.com/MysticX662/ThreatMonitoring.git
-cd ThreatMonitoring
-```
+### Prerequisites
+- Node.js 18+ & npm
+- Python 3.10+
 
-### 2. Configure and run the Python collectors
+### Setup Instructions
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env
-python src/<collector_name>.py
-```
+1. **Clone repository**:
+   ```bash
+   git clone https://github.com/MysticX662/Threat-Intelligence-Hub.git
+   cd Threat-Intelligence-Hub
+   ```
 
-Each collector writes its processed output to `api/v1/<feed_name>.json`.
+2. **Run Python Feed Collector**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt  # or run collectors directly
+   python3 collectors/main.py
+   ```
 
-### 3. Run the web interface
+3. **Launch Local Frontend**:
+   ```bash
+   npm install
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the threat feed interface.
 
-```bash
-cd web
-npm install
-npm run dev
-```
+---
 
-Open the local URL printed by Next.js.
+## Ethical Use & Security Boundary
 
-## Deployment Model
-
-The generated `api/v1/` directory can be served from GitHub Pages, Vercel, or another static host. Because the feed outputs are stored as JSON files, each update creates a reviewable and reproducible snapshot rather than depending on a continuously running backend.
-
-## What This Project Demonstrates
-
-- Python-based data ingestion and normalization
-- Static API design
-- Reproducible, version-controlled datasets
-- Next.js and TypeScript frontend development
-- Separation of data pipelines from user-facing product layers
-
-## Status
-
-This is a technical project and reference implementation. Data quality, update frequency, and source availability depend on the external feeds configured by the operator.
+- **Ethical OSINT Notice**: This tool ingests only publicly available open-source threat intelligence feeds for defensive research and educational purposes.
+- **Zero Confidential Data**: No private infrastructure, customer data, internal organizational feeds, or secret API credentials are exposed in this codebase.
