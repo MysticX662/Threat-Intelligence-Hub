@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-63077",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "JetBrains TeamCity: JetBrains TeamCity contains a deserialization of untrusted data vulnerability that could allow unauthenticated remote code execution via the agent polling protocol. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-05"
+  },
+  {
     "ioc": "CVE-2026-18556",
     "type": "vulnerability",
     "severity": "critical",
@@ -3989,14 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Kingsoft WPS Office: Kingsoft WPS Office contains a path traversal vulnerability in promecefpluginhost.exe on Windows that allows an attacker to load an arbitrary Windows library. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-09-03"
-  },
-  {
-    "ioc": "CVE-2021-20124",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "DrayTek VigorConnect: Draytek VigorConnect contains a path traversal vulnerability in the file download functionality of the WebServlet endpoint. An unauthenticated attacker could leverage this vulnerability to download arbitrary files from the underlying operating system with root privileges. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-09-03"
   }
 ]
