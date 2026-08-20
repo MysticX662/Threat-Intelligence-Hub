@@ -1,5 +1,21 @@
 [
   {
+    "ioc": "CVE-2026-72530",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "TrueConf Server: TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-20"
+  },
+  {
+    "ioc": "CVE-2026-72529",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "TrueConf Server: TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-20"
+  },
+  {
     "ioc": "CVE-2026-64849",
     "type": "vulnerability",
     "severity": "critical",
@@ -3981,22 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Adobe Flash Player: Adobe Flash Player contains an unspecified vulnerability in the ExternalInterface ActionScript functionality that allows a remote attacker to execute arbitrary code via crafted SWF content. | Action: The impacted product is end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue utilization of the product.",
-    "timestamp": "2024-09-17"
-  },
-  {
-    "ioc": "CVE-2013-0643",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Adobe Flash Player: Adobe Flash Player contains an incorrect default permissions vulnerability in the Firefox sandbox that allows a remote attacker to execute arbitrary code via crafted SWF content.  | Action: The impacted product is end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue utilization of the product.",
-    "timestamp": "2024-09-17"
-  },
-  {
-    "ioc": "CVE-2014-0497",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Adobe Flash Player: Adobe Flash Player contains an integer underflow vulnerability that allows a remote attacker to execute arbitrary code. | Action: The impacted product is end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue utilization of the product.",
     "timestamp": "2024-09-17"
   }
 ]
