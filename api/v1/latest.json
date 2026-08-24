@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-21962",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in: Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-08-24"
+  },
+  {
     "ioc": "CVE-2026-73570",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Apache HugeGraph-Server: Apache HugeGraph-Server contains an improper access control vulnerability that could allow a remote attacker to execute arbitrary code. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-09-18"
-  },
-  {
-    "ioc": "CVE-2014-0502",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Adobe Flash Player: Adobe Flash Player contains a double free vulnerability that allows a remote attacker to execute arbitrary code. | Action: The impacted product is end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue utilization of the product.",
-    "timestamp": "2024-09-17"
   }
 ]
