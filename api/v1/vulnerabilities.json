@@ -1,5 +1,53 @@
 [
   {
+    "ioc": "CVE-2021-23758",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Ajax.NET Professional Ajax.NET Professional: Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
+    "ioc": "CVE-2015-3246",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Red Hat Libuser: Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation.  | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
+    "ioc": "CVE-2015-5287",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Red Hat Automatic Bug Reporting Tool: Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
+    "ioc": "CVE-2022-0995",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Linux Kernel: Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
+    "ioc": "CVE-2026-8452",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service.  | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
+    "ioc": "CVE-2019-1068",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Microsoft SQL Server: Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-08-26"
+  },
+  {
     "ioc": "CVE-2026-60004",
     "type": "vulnerability",
     "severity": "critical",
@@ -3950,53 +3998,5 @@
     "source": "CISA KEV",
     "description": "DrayTek Multiple Vigor Routers: DrayTek Vigor3900, Vigor2960, and Vigor300B devices contain an OS command injection vulnerability in cgi-bin/mainfunction.cgi/cvmcfgupload that allows for remote code execution via shell metacharacters in a filename when the text/x-python-script content type is used. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-09-30"
-  },
-  {
-    "ioc": "CVE-2023-25280",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "D-Link DIR-820 Router: D-Link DIR-820 routers contain an OS command injection vulnerability that allows a remote, unauthenticated attacker to escalate privileges to root via a crafted payload with the ping_addr parameter to ping.ccp. | Action: The impacted product is end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue utilization of the product.",
-    "timestamp": "2024-09-30"
-  },
-  {
-    "ioc": "CVE-2024-7593",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Ivanti Virtual Traffic Manager: Ivanti Virtual Traffic Manager contains an authentication bypass vulnerability that allows a remote, unauthenticated attacker to create a chosen administrator account. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-09-24"
-  },
-  {
-    "ioc": "CVE-2024-8963",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Ivanti Cloud Services Appliance (CSA): Ivanti Cloud Services Appliance (CSA) contains a path traversal vulnerability that could allow a remote, unauthenticated attacker to access restricted functionality. If CVE-2024-8963 is used in conjunction with CVE-2024-8190, an attacker could bypass admin authentication and execute arbitrary commands on the appliance. | Action: As Ivanti CSA has reached End-of-Life status, users are urged to remove CSA 4.6.x from service or upgrade to the 5.0.x line of supported solutions, as future vulnerabilities on the 4.6.x version of CSA are unlikely to receive security updates.",
-    "timestamp": "2024-09-19"
-  },
-  {
-    "ioc": "CVE-2020-14644",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Oracle WebLogic Server: Oracle WebLogic Server, a product within the Fusion Middleware suite, contains a deserialization vulnerability. Unauthenticated attackers with network access via T3 or IIOP can exploit this vulnerability to achieve remote code execution. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-09-18"
-  },
-  {
-    "ioc": "CVE-2022-21445",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Oracle ADF Faces: Oracle ADF Faces library, included with Oracle JDeveloper Distribution, contains a deserialization of untrusted data vulnerability leading to unauthenticated remote code execution. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-09-18"
-  },
-  {
-    "ioc": "CVE-2020-0618",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Microsoft SQL Server: Microsoft SQL Server Reporting Services contains a deserialization vulnerability when handling page requests incorrectly. An authenticated attacker can exploit this vulnerability to execute code in the context of the Report Server service account. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-09-18"
   }
 ]
