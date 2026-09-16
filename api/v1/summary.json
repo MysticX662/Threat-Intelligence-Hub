@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-16T05:24:31.601057+00:00",
-  "total_iocs": 0,
+  "generated_at": "2026-09-16T10:05:59.792599+00:00",
+  "total_iocs": 500,
   "cors": {
     "note": "GitHub Raw serves Access-Control-Allow-Origin: * on all responses.",
     "header": "Access-Control-Allow-Origin: *"
@@ -12,7 +12,13 @@
     "vulnerabilities": "https://raw.githubusercontent.com/MysticX662/ThreatMonitoring/main/api/v1/vulnerabilities.json",
     "summary": "https://raw.githubusercontent.com/MysticX662/ThreatMonitoring/main/api/v1/summary.json"
   },
-  "by_source": {},
-  "by_type": {},
-  "by_severity": {}
+  "by_source": {
+    "CISA KEV": 500
+  },
+  "by_type": {
+    "vulnerability": 500
+  },
+  "by_severity": {
+    "critical": 500
+  }
 }
