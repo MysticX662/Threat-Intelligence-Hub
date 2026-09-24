@@ -1,5 +1,21 @@
 [
   {
+    "ioc": "CVE-2026-5430",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "WSO2 Multiple Products: WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.  | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-09-24"
+  },
+  {
+    "ioc": "CVE-2026-71362",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Adobe Commerce and Magento : Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.  | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-09-24"
+  },
+  {
     "ioc": "CVE-2026-93952",
     "type": "vulnerability",
     "severity": "critical",
@@ -3982,21 +3998,5 @@
     "source": "CISA KEV",
     "description": "North Grid Proself: North Grid Proself Enterprise/Standard, Gateway, and Mail Sanitize contain an improper restriction of XML External Entity (XXE) reference vulnerability, which could allow a remote, unauthenticated attacker to conduct an XXE attack. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-12-03"
-  },
-  {
-    "ioc": "CVE-2023-28461",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Array Networks  AG/vxAG ArrayOS: Array Networks AG and vxAG ArrayOS contain a missing authentication for critical function vulnerability that allows an attacker to read local files and execute code on the SSL VPN gateway. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-11-25"
-  },
-  {
-    "ioc": "CVE-2024-21287",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Oracle Agile Product Lifecycle Management (PLM): Oracle Agile Product Lifecycle Management (PLM) contains an incorrect authorization vulnerability in the Process Extension component of the Software Development Kit. Successful exploitation of this vulnerability may result in unauthenticated file disclosure. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-11-21"
   }
 ]
