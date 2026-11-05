@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2024-27834",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Apple Multiple Products: Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-11-04"
+  },
+  {
     "ioc": "CVE-2026-119977",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Mitel SIP Phones: Mitel 6800 Series, 6900 Series, and 6900w Series SIP Phones, including the 6970 Conference Unit, contain an argument injection vulnerability due to insufficient parameter sanitization during the boot process. Successful exploitation may allow an attacker to execute arbitrary commands within the context of the system. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2025-02-12"
-  },
-  {
-    "ioc": "CVE-2024-40891",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Zyxel DSL CPE Devices: Multiple Zyxel DSL CPE devices contain a post-authentication command injection vulnerability in the management commands that could allow an authenticated attacker to execute OS commands via Telnet. | Action: The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization if a current mitigation is unavailable.",
-    "timestamp": "2025-02-11"
   }
 ]
